@@ -36,24 +36,6 @@ jobs:
           unzip -q templates.tpz
           mv templates/* ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
 
-      - name: Install Blender
-        env:
-          BLENDER_VERSION: 5.2.1
-        run: |
-          curl -L -o blender.tar.xz "https://download.blender.org/release/Blender5.2/blender-${BLENDER_VERSION}-linux-x64.tar.xz"
-          mkdir -p ~/blender
-          tar -xf blender.tar.xz -C ~/blender --strip-components=1
-
-      - name: Configure Blender path for headless import
-        run: |
-          mkdir -p ~/.config/godot
-          cat > ~/.config/godot/editor_settings-4.tres <<EOF
-          [gd_resource type="EditorSettings" format=3]
-
-          [resource]
-          filesystem/import/blender/blender_path = "$HOME/blender/blender"
-          EOF
-
       - name: Import project resources
         run: ./godot_bin --headless --editor --quit --path .
 
