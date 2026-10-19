@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dmo1m87yd8x02"]
+
+[ext_resource type="Texture2D" uid="uid://w2vautdvd8ia" path="res://assets/placeholder-backgrd.png" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://d1ql02xm4m4ds" path="res://player/player.tscn" id="2_fj7yv"]
+
+[node name="World" type="Node2D" unique_id=742943491]
+
+[node name="PlaceholderBackgrd" type="Sprite2D" parent="." unique_id=1756315433]
+texture_filter = 1
+position = Vector2(526.92706, 453)
+scale = Vector2(1.5729166, 1.5729166)
+texture = ExtResource("1_f3sb7")
+
+[node name="Player" parent="." unique_id=1177478483 instance=ExtResource("2_fj7yv")]
+position = Vector2(548, 507)
