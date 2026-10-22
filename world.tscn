@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://dmo1m87yd8x02"]
 
 [ext_resource type="Texture2D" uid="uid://w2vautdvd8ia" path="res://assets/placeholder-backgrd.png" id="1_f3sb7"]
+[ext_resource type="Script" uid="uid://crgxe7jk54qyp" path="res://world.gd" id="1_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://d1ql02xm4m4ds" path="res://player/player.tscn" id="2_fj7yv"]
 
 [node name="World" type="Node2D" unique_id=742943491]
+script = ExtResource("1_tlwt5")
 
 [node name="PlaceholderBackgrd" type="Sprite2D" parent="." unique_id=1756315433]
 texture_filter = 1
