@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dbmmamebxxebw"]
+
+[ext_resource type="Script" uid="uid://cdcsw0olg61rn" path="res://door/door.gd" id="1_plcny"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_380jf"]
+font_size = 12
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6l6aw"]
+radius = 28.0
+
+[node name="Door" type="Area2D" unique_id=796406485]
+collision_mask = 2
+script = ExtResource("1_plcny")
+
+[node name="OpenTheDoorLabel" type="Label" parent="." unique_id=1579179186]
+offset_left = 9.0
+offset_top = -36.0
+offset_right = 84.0
+offset_bottom = -13.0
+text = "E : Get inside"
+label_settings = SubResource("LabelSettings_380jf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1038415696]
+shape = SubResource("CircleShape2D_6l6aw")
